@@ -3,6 +3,8 @@
 <!--Navigation graph must provide start destination-->
 <!--There must be actions to perform navigation between the fragments-->
 <!--Actions can be provided with animations-->
+<!--Destination fragments can have safe arguments-->
+<!--In this case additional classes will be generated to use the arguments-->
 
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -25,6 +27,11 @@
         android:id="@+id/blankFragment2"
         android:name="com.gpetuhov.android.samplenavigation.BlankFragment2"
         android:label="BlankFragment2"
-        tools:layout="@layout/fragment_blank_fragment2" />
+        tools:layout="@layout/fragment_blank_fragment2" >
+        <argument
+            android:name="input"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 
 </navigation>

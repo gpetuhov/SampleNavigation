@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+
+// This is needed for the navigation safe-args
+apply plugin: 'androidx.navigation.safeargs'
 
 android {
     compileSdkVersion 27

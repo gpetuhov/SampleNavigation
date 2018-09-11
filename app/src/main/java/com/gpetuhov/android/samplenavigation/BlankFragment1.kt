@@ -22,10 +22,14 @@ class BlankFragment1 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Here we navigate from one fragment to another.
-        // Note that we pass id of the action.
         button.setOnClickListener {
-            findNavController().navigate(R.id.action_blankFragment1_to_blankFragment2)
+            // Here we pass args to BlankFragment2
+            val action = BlankFragment1Directions.actionBlankFragment1ToBlankFragment2()
+            action.setInput(500)
+
+            // Navigate to BlankFragment2
+            // Note that we pass action into navigate() method
+            findNavController().navigate(action)
         }
     }
 }

@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_blank_fragment2.*
 
 class BlankFragment2 : Fragment() {
 
@@ -13,5 +14,12 @@ class BlankFragment2 : Fragment() {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_blank_fragment2, container, false)
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        // Here we use arguments passed from BlankFragment1
+        blankFragment2Text.text = BlankFragment2Args.fromBundle(arguments).input.toString()
     }
 }
