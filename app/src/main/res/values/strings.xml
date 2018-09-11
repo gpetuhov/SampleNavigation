@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SampleNavigation</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment2">Hello blank fragment 2222222</string>
+    <string name="button">Button</string>
 </resources>
