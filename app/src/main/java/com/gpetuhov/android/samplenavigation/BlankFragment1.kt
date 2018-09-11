@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
+// In this sample project we will navigate from BlankFragment1 to BlankFragment2 and back
 
 class BlankFragment1 : Fragment() {
 
