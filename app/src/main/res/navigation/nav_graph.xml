@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--Navigation graph must provide start destination-->
+<!--There must be actions to perform navigation between the fragments-->
 
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,7 +12,16 @@
     <fragment
         android:id="@+id/blankFragment1"
         android:name="com.gpetuhov.android.samplenavigation.BlankFragment1"
-        android:label="fragment_blank_fragment1"
-        tools:layout="@layout/fragment_blank_fragment1" />
+        android:label="BlankFragment1"
+        tools:layout="@layout/fragment_blank_fragment1" >
+        <action
+            android:id="@+id/action_blankFragment1_to_blankFragment2"
+            app:destination="@id/blankFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment2"
+        android:name="com.gpetuhov.android.samplenavigation.BlankFragment2"
+        android:label="BlankFragment2"
+        tools:layout="@layout/fragment_blank_fragment2" />
 
 </navigation>
