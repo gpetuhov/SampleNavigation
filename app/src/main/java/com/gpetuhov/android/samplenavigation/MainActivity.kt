@@ -2,6 +2,7 @@ package com.gpetuhov.android.samplenavigation
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import androidx.navigation.findNavController
 
 // The project has only one activity.
 // The activity just holds NavHostFragment,
@@ -15,4 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+    // We must override this method like this
+    override fun onSupportNavigateUp() = findNavController(R.id.nav_host).navigateUp()
 }

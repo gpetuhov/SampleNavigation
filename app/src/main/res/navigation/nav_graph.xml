@@ -2,6 +2,7 @@
 
 <!--Navigation graph must provide start destination-->
 <!--There must be actions to perform navigation between the fragments-->
+<!--Actions can be provided with animations-->
 
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,7 +17,9 @@
         tools:layout="@layout/fragment_blank_fragment1" >
         <action
             android:id="@+id/action_blankFragment1_to_blankFragment2"
-            app:destination="@id/blankFragment2" />
+            app:destination="@id/blankFragment2"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
     <fragment
         android:id="@+id/blankFragment2"
