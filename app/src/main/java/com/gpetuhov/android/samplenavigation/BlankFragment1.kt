@@ -23,7 +23,9 @@ class BlankFragment1 : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         button.setOnClickListener {
-            // Here we pass args to BlankFragment2
+            // Here we pass args to BlankFragment2.
+            // To do it we use generated classes.
+            // For the classes to be generated, we must set arguments in the navigation graph xml.
             val action = BlankFragment1Directions.actionBlankFragment1ToBlankFragment2()
             action.setInput(500)
 

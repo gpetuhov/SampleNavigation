@@ -19,7 +19,8 @@ class BlankFragment2 : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        // Here we use arguments passed from BlankFragment1
+        // Here we use arguments passed from BlankFragment1.
+        // This class is generated if we set arguments in the navigation graph xml.
         blankFragment2Text.text = BlankFragment2Args.fromBundle(arguments).input.toString()
     }
 }
